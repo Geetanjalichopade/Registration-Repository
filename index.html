@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Geetanjali</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background Decoration -->
+    <div class="background">
+
+        <div class="circle circle-one"></div>
+
+        <div class="circle circle-two"></div>
+
+        <div class="circle circle-three"></div>
+
+    </div>
+
+
+    <!-- Main Container -->
+    <div class="login-container">
+
+
+        <!-- Left Section -->
+        <div class="welcome-section">
+
+
+            <div class="logo">
+
+                <div class="logo-icon">
+
+                    <i class="fa-solid fa-code"></i>
+
+                </div>
+
+                <span>Geetanjali</span>
+
+            </div>
+
+
+
+            <div class="welcome-content">
+
+                <span class="small-title">
+                    WELCOME BACK
+                </span>
+
+
+                <h1>
+
+                    Build your future
+
+                    <span>
+                        with technology.
+                    </span>
+
+                </h1>
+
+
+                <p>
+
+                    Welcome to your professional workspace.
+                    Login to continue your journey and explore
+                    your personalized dashboard.
+
+                </p>
+
+
+
+                <div class="features">
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Secure Access
+                            </h3>
+
+                            <p>
+                                Your information is protected.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+
+                            <i class="fa-solid fa-bolt"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Fast & Simple
+                            </h3>
+
+                            <p>
+                                Quick and easy login experience.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <div class="copyright">
+
+                © 2026 Geetanjali.
+                All rights reserved.
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- Right Login Section -->
+        <div class="login-section">
+
+
+            <div class="login-box">
+
+
+                <!-- Mobile Logo -->
+                <div class="mobile-logo">
+
+                    <div class="mobile-logo-icon">
+
+                        <i class="fa-solid fa-code"></i>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Login Header -->
+                <div class="login-header">
+
+                    <span class="login-label">
+                        ACCOUNT LOGIN
+                    </span>
+
+
+                    <h2>
+                        Welcome Back!
+                    </h2>
+
+
+                    <p>
+                        Please enter your details to continue.
+                    </p>
+
+                </div>
+
+
+
+                <!-- Login Form -->
+                <form id="loginForm">
+
+
+                    <!-- Email -->
+                    <div class="input-group">
+
+
+                        <label for="email">
+
+                            Email Address
+
+                        </label>
+
+
+                        <div class="input-box">
+
+
+                            <i class="fa-regular fa-envelope"></i>
+
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter your email"
+                                autocomplete="email"
+                            >
+
+
+                        </div>
+
+
+                        <small
+                            class="error"
+                            id="emailError">
+                        </small>
+
+
+                    </div>
+
+
+
+                    <!-- Password -->
+                    <div class="input-group">
+
+
+                        <div class="password-label">
+
+
+                            <label for="password">
+
+                                Password
+
+                            </label>
+
+
+                            <a
+                                href="#"
+                                onclick="forgotPassword(event)">
+
+                                Forgot Password?
+
+                            </a>
+
+
+                        </div>
+
+
+
+                        <div class="input-box">
+
+
+                            <i class="fa-solid fa-lock"></i>
+
+
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                            >
+
+
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                onclick="togglePassword()">
+
+                                <i
+                                    class="fa-regular fa-eye"
+                                    id="eyeIcon">
+                                </i>
+
+                            </button>
+
+
+                        </div>
+
+
+                        <small
+                            class="error"
+                            id="passwordError">
+                        </small>
+
+
+                    </div>
+
+
+
+                    <!-- Remember Me -->
+                    <div class="options">
+
+
+                        <label class="remember">
+
+
+                            <input
+                                type="checkbox"
+                                id="remember">
+
+
+                            <span class="checkmark"></span>
+
+
+                            Remember me
+
+
+                        </label>
+
+
+                    </div>
+
+
+
+                    <!-- Login Button -->
+                    <button
+                        type="submit"
+                        class="login-button">
+
+
+                        <span>
+                            Login
+                        </span>
+
+
+                        <i
+                            class="fa-solid fa-arrow-right">
+                        </i>
+
+
+                    </button>
+
+
+                </form>
+
+
+
+                <!-- Divider -->
+                <div class="divider">
+
+                    <span>
+                        OR
+                    </span>
+
+                </div>
+
+
+
+                <!-- Social Login -->
+                <div class="social-login">
+
+
+                    <button
+                        class="social-button"
+                        onclick="socialLogin('Google')">
+
+
+                        <i
+                            class="fa-brands fa-google">
+                        </i>
+
+
+                        Continue with Google
+
+
+                    </button>
+
+
+
+                    <button
+                        class="social-button"
+                        onclick="socialLogin('GitHub')">
+
+
+                        <i
+                            class="fa-brands fa-github">
+                        </i>
+
+
+                        Continue with GitHub
+
+
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- Register -->
+                <div class="register">
+
+
+                    <p>
+
+                        Don't have an account?
+
+
+                        <!-- Dashboard Link -->
+                        <a href="dashboard.html">
+
+                            Create Account
+
+                        </a>
+
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- Toast Message -->
+    <div
+        class="toast"
+        id="toast">
+
+
+        <div class="toast-icon">
+
+            <i class="fa-solid fa-check"></i>
+
+        </div>
+
+
+        <div>
+
+            <strong id="toastTitle">
+                Success
+            </strong>
+
+
+            <p id="toastMessage">
+                Login successful!
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

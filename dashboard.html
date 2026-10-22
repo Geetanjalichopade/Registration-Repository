@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>User Dashboard | Geetanjali</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet"
+        href="dashboard.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         DASHBOARD WRAPPER
+         ===================================================== -->
+
+    <div class="dashboard-wrapper">
+
+
+        <!-- =================================================
+             SIDEBAR
+             ================================================= -->
+
+        <aside class="sidebar">
+
+
+            <!-- LOGO -->
+            <div class="sidebar-logo">
+
+                <div class="logo-icon">
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+
+                <div>
+                    <h2>Geetanjali</h2>
+                    <span>Student Portal</span>
+                </div>
+
+            </div>
+
+
+            <!-- NAVIGATION -->
+            <nav class="sidebar-nav">
+
+                <a href="#" class="nav-link active">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <a href="#" class="nav-link">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <span>My Profile</span>
+
+                </a>
+
+
+                <a href="#" class="nav-link">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    <span>Analytics</span>
+
+                </a>
+
+
+                <a href="#" class="nav-link">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    <span>Projects</span>
+
+                </a>
+
+
+                <a href="#" class="nav-link">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    <span>Settings</span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="sidebar-bottom">
+
+                <button
+                    class="logout-btn"
+                    onclick="logoutUser()">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Logout</span>
+
+                </button>
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- =================================================
+             MAIN CONTENT
+             ================================================= -->
+
+        <main class="main-content">
+
+
+            <!-- =================================================
+                 TOP BAR
+                 ================================================= -->
+
+            <header class="topbar">
+
+
+                <div class="topbar-left">
+
+                    <h1>Dashboard</h1>
+
+                    <p>
+                        Welcome back! Here's your account overview.
+                    </p>
+
+                </div>
+
+
+                <div class="topbar-right">
+
+
+                    <!-- Notification -->
+
+                    <button class="notification-btn">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="notification-dot"></span>
+
+                    </button>
+
+
+                    <!-- User -->
+
+                    <div class="top-user">
+
+                        <div
+                            class="user-avatar"
+                            id="userAvatar">
+
+                            G
+
+                        </div>
+
+
+                        <div class="top-user-info">
+
+                            <strong id="userName">
+                                Geetanjali
+                            </strong>
+
+                            <span>
+                                MCA Student
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =================================================
+                 PAGE CONTENT
+                 ================================================= -->
+
+            <section class="dashboard-content">
+
+
+                <!-- =================================================
+                     WELCOME CARD
+                     ================================================= -->
+
+                <div class="welcome-card">
+
+
+                    <div class="welcome-text">
+
+                        <span class="welcome-label">
+                            Welcome back 👋
+                        </span>
+
+
+                        <h2>
+                            Hello,
+                            <span id="welcomeName">
+                                Geetanjali
+                            </span>!
+                        </h2>
+
+
+                        <p>
+                            Manage your profile, projects and
+                            account information from your dashboard.
+                        </p>
+
+
+                        <button
+                            class="primary-btn"
+                            onclick="window.location.href='#profile'">
+
+                            <i class="fa-solid fa-user"></i>
+
+                            View Profile
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="welcome-icon">
+
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     STATISTICS
+                     ================================================= -->
+
+                <div class="stats-grid">
+
+
+                    <!-- CARD 1 -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon purple">
+
+                            <i class="fa-solid fa-user-check"></i>
+
+                        </div>
+
+                        <div class="stat-info">
+
+                            <span>Profile</span>
+
+                            <h3>Active</h3>
+
+                            <small>
+                                Your profile is active
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CARD 2 -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon blue">
+
+                            <i class="fa-solid fa-folder"></i>
+
+                        </div>
+
+                        <div class="stat-info">
+
+                            <span>Projects</span>
+
+                            <h3>04</h3>
+
+                            <small>
+                                Academic projects
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CARD 3 -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon green">
+
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                        </div>
+
+                        <div class="stat-info">
+
+                            <span>Account</span>
+
+                            <h3>Verified</h3>
+
+                            <small>
+                                Account secured
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CARD 4 -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon orange">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                        </div>
+
+                        <div class="stat-info">
+
+                            <span>Status</span>
+
+                            <h3>Online</h3>
+
+                            <small>
+                                Account is active
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     CONTENT GRID
+                     ================================================= -->
+
+                <div class="content-grid">
+
+
+                    <!-- =================================================
+                         PROFILE CARD
+                         ================================================= -->
+
+                    <div
+                        class="dashboard-card profile-card"
+                        id="profile">
+
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <span class="card-label">
+                                    Personal Information
+                                </span>
+
+                                <h3>
+                                    My Profile
+                                </h3>
+
+                            </div>
+
+
+                            <div class="card-header-icon">
+
+                                <i class="fa-solid fa-user"></i>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="profile-details">
+
+
+                            <!-- NAME -->
+
+                            <div class="profile-row">
+
+                                <div class="profile-row-icon">
+
+                                    <i class="fa-solid fa-user"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        Full Name
+                                    </span>
+
+                                    <strong id="profileName">
+                                        Geetanjali
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- EMAIL -->
+
+                            <div class="profile-row">
+
+                                <div class="profile-row-icon">
+
+                                    <i class="fa-solid fa-envelope"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        Email Address
+                                    </span>
+
+                                    <strong id="profileEmail">
+                                        Not available
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- PHONE -->
+
+                            <div class="profile-row">
+
+                                <div class="profile-row-icon">
+
+                                    <i class="fa-solid fa-phone"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        Mobile Number
+                                    </span>
+
+                                    <strong id="profilePhone">
+                                        Not available
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <button class="secondary-btn">
+
+                            <i class="fa-solid fa-pen"></i>
+
+                            Edit Profile
+
+                        </button>
+
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         QUICK ACTIONS
+                         ================================================= -->
+
+                    <div class="dashboard-card quick-card">
+
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <span class="card-label">
+                                    Quick Access
+                                </span>
+
+                                <h3>
+                                    Quick Actions
+                                </h3>
+
+                            </div>
+
+
+                            <div class="card-header-icon">
+
+                                <i class="fa-solid fa-bolt"></i>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="quick-actions">
+
+
+                            <!-- VIEW PROFILE -->
+
+                            <a href="#profile"
+                                class="quick-action">
+
+                                <div class="quick-icon purple">
+
+                                    <i class="fa-solid fa-user"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        View Profile
+                                    </strong>
+
+                                    <span>
+                                        Check your information
+                                    </span>
+
+                                </div>
+
+                                <i class="fa-solid fa-chevron-right"></i>
+
+                            </a>
+
+
+
+                            <!-- PROJECTS -->
+
+                            <a href="#"
+                                class="quick-action">
+
+                                <div class="quick-icon blue">
+
+                                    <i class="fa-solid fa-code"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        My Projects
+                                    </strong>
+
+                                    <span>
+                                        View your projects
+                                    </span>
+
+                                </div>
+
+                                <i class="fa-solid fa-chevron-right"></i>
+
+                            </a>
+
+
+
+                            <!-- SETTINGS -->
+
+                            <a href="#"
+                                class="quick-action">
+
+                                <div class="quick-icon green">
+
+                                    <i class="fa-solid fa-gear"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Account Settings
+                                    </strong>
+
+                                    <span>
+                                        Manage your account
+                                    </span>
+
+                                </div>
+
+                                <i class="fa-solid fa-chevron-right"></i>
+
+                            </a>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     RECENT ACTIVITY
+                     ================================================= -->
+
+                <div class="dashboard-card activity-card">
+
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <span class="card-label">
+                                Account Overview
+                            </span>
+
+                            <h3>
+                                Recent Activity
+                            </h3>
+
+                        </div>
+
+
+                        <div class="card-header-icon">
+
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="activity-list">
+
+
+                        <!-- ACTIVITY 1 -->
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon">
+
+                                <i class="fa-solid fa-user-plus"></i>
+
+                            </div>
+
+                            <div class="activity-content">
+
+                                <strong>
+                                    Account Created
+                                </strong>
+
+                                <span>
+                                    Your account was successfully created.
+                                </span>
+
+                            </div>
+
+                            <span class="activity-status">
+                                Completed
+                            </span>
+
+                        </div>
+
+
+
+                        <!-- ACTIVITY 2 -->
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon">
+
+                                <i class="fa-solid fa-shield-check"></i>
+
+                            </div>
+
+                            <div class="activity-content">
+
+                                <strong>
+                                    Account Secured
+                                </strong>
+
+                                <span>
+                                    Your registration details are secured.
+                                </span>
+
+                            </div>
+
+                            <span class="activity-status">
+                                Active
+                            </span>
+
+                        </div>
+
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     FOOTER
+                     ================================================= -->
+
+                <footer class="dashboard-footer">
+
+                    <p>
+                        © 2026 Geetanjali Chopade.
+                        All rights reserved.
+                    </p>
+
+                    <div>
+
+                        <span>
+                            MCA Student
+                        </span>
+
+                        <span class="footer-dot">
+                            •
+                        </span>
+
+                        <span>
+                            Data Science Enthusiast
+                        </span>
+
+                    </div>
+
+                </footer>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         DASHBOARD JAVASCRIPT
+         ===================================================== -->
+
+    <script src="dashboard.js"></script>
+
+
+</body>
+
+</html>
